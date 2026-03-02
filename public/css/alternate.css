@@ -1,0 +1,16 @@
+/* ── Alternate Universe Page ──────────────────────── */
+.universes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:2rem 0; }
+.universe-card { padding:2rem; text-align:center; position:relative; overflow:hidden; }
+.universe-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+.universe-card--continue::before { background:var(--info); }
+.universe-card--improved::before { background:var(--success); }
+.universe-card--worsened::before { background:var(--danger); }
+.universe-card--continue { border-color:rgba(59,130,246,0.2); }
+.universe-card--improved { border-color:rgba(16,185,129,0.2); }
+.universe-card--worsened { border-color:rgba(239,68,68,0.2); }
+.universe-card__icon { font-size:3rem; margin-bottom:1rem; }
+.universe-card__title { font-size:1.2rem; font-weight:700; margin-bottom:0.5rem; }
+.universe-card__subtitle { font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.5rem; }
+.universe-card__scores { text-align:left; }
+.universe-card__score-item { display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.4rem; padding:0.3rem 0; border-bottom:1px solid var(--border); }
+@media(max-width:768px) { .universes-grid { grid-template-columns:1fr; } }

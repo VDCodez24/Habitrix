@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Comparison — Future Mirror</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/comparison.css">
+</head>
+<body>
+  <nav class="navbar"><a href="index.html" class="navbar__logo"><span>🌌</span> Future Mirror</a><div class="hamburger"><span></span><span></span><span></span></div><div class="navbar__links"><a href="index.html">Home</a><a href="assessment.html">Assessment</a><a href="dashboard.html">Dashboard</a><a href="timeline.html">Timeline</a><a href="alternate.html">Alternate</a><a href="comparison.html">Compare</a><a href="divergence.html">Divergence</a><a href="blueprint.html">Blueprint</a><a href="problems.html">Problems</a><a href="aging.html">Aging</a></div><div class="navbar__actions"><button class="theme-toggle" onclick="toggleTheme()">☀️</button></div></nav>
+  <main class="main-content" id="comp-content">
+    <h1 class="section-title">👥 Peer Comparison</h1>
+    <p class="section-subtitle">See how you compare against anonymous peer benchmarks</p>
+    <div class="benchmark-select">
+      <button class="benchmark-btn active" data-group="ageGroup">📊 Age Group Average</button>
+      <button class="benchmark-btn" data-group="productivityFocused">🚀 Productivity-Focused</button>
+      <button class="benchmark-btn" data-group="healthFocused">💪 Health-Focused</button>
+    </div>
+    <div class="comparison-charts">
+      <div class="card comparison-card"><h3>🎯 Radar Overlay</h3><div id="comp-radar"></div></div>
+      <div class="card comparison-card"><h3>📊 Score Comparison</h3><div id="comp-bar"></div></div>
+    </div>
+  </main>
+  <footer class="footer"><p>🌌 Future Mirror | Built with ❤️</p></footer>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="js/global.js"></script><script src="js/scoring.js"></script><script src="js/comparison.js"></script>
+</body>
+</html>

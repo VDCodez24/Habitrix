@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment — Future Mirror</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/assessment.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo"><span>🌌</span> Future Mirror</a>
+    <div class="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+    <div class="navbar__links">
+      <a href="index.html">Home</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="alternate.html">Alternate</a>
+      <a href="comparison.html">Compare</a>
+      <a href="divergence.html">Divergence</a>
+      <a href="blueprint.html">Blueprint</a>
+      <a href="problems.html">Problems</a>
+      <a href="aging.html">Aging</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="assessment-header">
+      <h1 class="section-title">🔮 Behavioral Assessment</h1>
+      <p class="section-subtitle">Rate your 20 daily habits honestly. Your future depends on it.</p>
+    </div>
+
+    <div id="habits-container"></div>
+
+    <div class="assessment-submit">
+      <div class="progress-indicator">
+        <span id="progress-text">0/20 habits rated</span>
+        <div class="progress-bar">
+          <div class="progress-bar__fill" id="progress-fill" style="width:0%"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="submitAssessment()">
+        🔮 Simulate My Future
+      </button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>🌌 Future Mirror — Behavioral Future Simulation Engine | Built with ❤️</p>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/assessment.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Aging Effect — Future Mirror</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/aging.css">
+</head>
+<body>
+  <nav class="navbar"><a href="index.html" class="navbar__logo"><span>🌌</span> Future Mirror</a><div class="hamburger"><span></span><span></span><span></span></div><div class="navbar__links"><a href="index.html">Home</a><a href="assessment.html">Assessment</a><a href="dashboard.html">Dashboard</a><a href="timeline.html">Timeline</a><a href="alternate.html">Alternate</a><a href="comparison.html">Compare</a><a href="divergence.html">Divergence</a><a href="blueprint.html">Blueprint</a><a href="problems.html">Problems</a><a href="aging.html">Aging</a></div><div class="navbar__actions"><button class="theme-toggle" onclick="toggleTheme()">☀️</button></div></nav>
+
+  <main class="main-content" id="aging-content">
+    <h1 class="section-title">🧬 Visual Aging Effect</h1>
+    <p class="section-subtitle">See how your current habits affect your physical appearance over time</p>
+
+    <div class="aging-layout">
+      <!-- Visual Face -->
+      <div class="aging-visual">
+        <div class="face-container">
+          <div class="face-base">
+            <div class="face-eyes"><div class="eye"></div><div class="eye"></div></div>
+            <div class="dark-circles"><div class="dark-circle"></div><div class="dark-circle"></div></div>
+            <div class="mouth"></div>
+          </div>
+          <div class="energy-aura"></div>
+        </div>
+        <p style="color:var(--text-muted);font-size:0.85rem;text-align:center">Visual representation based on your health scores</p>
+      </div>
+
+      <!-- Details -->
+      <div>
+        <div class="card aging-details" id="aging-details">
+          <p style="color:var(--text-muted)">Loading aging analysis...</p>
+        </div>
+
+        <div class="card aging-meter">
+          <span class="aging-meter__label">Aging Acceleration</span>
+          <div class="aging-meter__bar"><div class="aging-meter__fill" id="aging-meter-fill" style="width:0%"></div></div>
+          <span class="aging-meter__value" id="aging-meter-value">-</span>
+        </div>
+
+        <div class="card" style="padding:1.5rem">
+          <h3 style="font-weight:700;margin-bottom:1rem">💡 Recommendations</h3>
+          <ul class="recommendations-list" id="recommendations">
+            <li>Loading recommendations...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><p>🌌 Future Mirror | Built with ❤️</p></footer>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/global.js"></script><script src="js/scoring.js"></script><script src="js/aging.js"></script>
+</body>
+</html>

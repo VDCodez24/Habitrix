@@ -1,0 +1,13 @@
+/* ── Divergence Page ──────────────────────────────── */
+.divergence-layout { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0; }
+.sliders-panel { padding:1.5rem; }
+.div-slider-group { margin-bottom:1.5rem; }
+.div-slider-group label { display:flex; justify-content:space-between; font-weight:600; margin-bottom:0.5rem; }
+.div-slider-group input[type=range] { width:100%; }
+.div-slider-value { font-weight:700; color:var(--accent-light); }
+.delta-card { padding:1.25rem; margin-bottom:0.75rem; display:flex; justify-content:space-between; align-items:center; }
+.delta-label { font-size:0.9rem; }
+.delta-value { font-weight:700; font-size:1.1rem; }
+.delta-positive { color:var(--success); }
+.delta-negative { color:var(--danger); }
+@media(max-width:768px) { .divergence-layout { grid-template-columns:1fr; } }

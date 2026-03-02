@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Mirror — See Your Future Before It Happens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo"><span>🌌</span> Habitrix</a>
+    <div class="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+    <div class="navbar__links">
+      <a href="index.html">Home</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="alternate.html">Alternate</a>
+      <a href="comparison.html">Compare</a>
+      <a href="divergence.html">Divergence</a>
+      <a href="blueprint.html">Blueprint</a>
+      <a href="problems.html">Problems</a>
+      <a href="aging.html">Aging</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__text">
+        <div class="hero__badge">🧠 Preventive Behavioral Intelligence</div>
+        <h1 class="hero__title">
+          See Your <span class="gradient-text">Future</span><br>
+          Before It Happens
+        </h1>
+        <p class="hero__desc">
+          Millions suffer from silent lifestyle deterioration. Future Mirror detects early behavioral 
+          risk patterns and simulates long-term consequences — before damage occurs.
+        </p>
+        <div class="hero__buttons">
+          <a href="assessment.html" class="btn btn-primary">🔮 Start Assessment</a>
+          <a href="problems.html" class="btn btn-secondary">📊 Learn More</a>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-item__number">20</div>
+            <div class="stat-item__label">Habits Tracked</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number">1000+</div>
+            <div class="stat-item__label">Outcome Combos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number">4</div>
+            <div class="stat-item__label">Time Horizons</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__3d" id="three-container"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2 class="section-title" style="text-align:center">Core Features</h2>
+      <p class="section-subtitle" style="text-align:center">Not a habit tracker. A behavior intelligence engine.</p>
+      <div class="grid-4">
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">🎯</div>
+          <div class="feature-card__title">20-Habit Assessment</div>
+          <div class="feature-card__desc">Interactive habit cards with real-time emoji feedback, risk meters, and color-coded scoring.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">🛑</div>
+          <div class="feature-card__title">Risk Cluster Detection</div>
+          <div class="feature-card__desc">Identifies dangerous habit combinations that accelerate burnout, financial spiral, or health decline.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">📈</div>
+          <div class="feature-card__title">Multi-Timeline Projection</div>
+          <div class="feature-card__desc">Visualize probable futures at 3 months, 1 year, and 5-10 years with AI-powered narratives.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">🌍</div>
+          <div class="feature-card__title">Alternate Universe Mode</div>
+          <div class="feature-card__desc">See 3 parallel futures — current path, improved habits, or worsened trajectory.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">🔄</div>
+          <div class="feature-card__title">Future Divergence Slider</div>
+          <div class="feature-card__desc">Adjust habits and watch probability shifts in real-time. Interactive and empowering.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">👥</div>
+          <div class="feature-card__title">Peer Comparison</div>
+          <div class="feature-card__desc">Anonymous benchmarking against age groups, productivity-focused and health-focused cohorts.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">📋</div>
+          <div class="feature-card__title">30-Day Blueprint</div>
+          <div class="feature-card__desc">AI-generated micro habit shifts with priority ranking and estimated improvement percentages.</div>
+        </div>
+        <div class="card feature-card animate-on-scroll">
+          <div class="feature-card__icon">🧬</div>
+          <div class="feature-card__title">Visual Aging Effect</div>
+          <div class="feature-card__desc">See how your habits affect your appearance — skin glow, dark circles, energy aura.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2 class="section-title" style="text-align:center">How It Works</h2>
+      <p class="section-subtitle" style="text-align:center">From input to insight in 4 simple steps</p>
+      <div class="steps-grid">
+        <div class="card step-card animate-on-scroll">
+          <div class="step-card__number">1</div>
+          <div class="step-card__title">Input Habits</div>
+          <div class="step-card__desc">Rate your 20 daily habits using intuitive slider cards with instant visual feedback.</div>
+        </div>
+        <div class="card step-card animate-on-scroll">
+          <div class="step-card__number">2</div>
+          <div class="step-card__title">Score & Analyze</div>
+          <div class="step-card__desc">Our weighted scoring matrix converts habits into 5 master scores and detects risk clusters.</div>
+        </div>
+        <div class="card step-card animate-on-scroll">
+          <div class="step-card__number">3</div>
+          <div class="step-card__title">AI Simulation</div>
+          <div class="step-card__desc">Structured data is sent to AI for dynamic future narrative generation across multiple timelines.</div>
+        </div>
+        <div class="card step-card animate-on-scroll">
+          <div class="step-card__number">4</div>
+          <div class="step-card__title">Act & Improve</div>
+          <div class="step-card__desc">Receive personalized 30-day intervention blueprint with priority actions and progress tracking.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section animate-on-scroll">
+      <h2>Ready to See Your Future?</h2>
+      <p>It takes less than 5 minutes. Understand how your daily habits are shaping your long-term outcomes.</p>
+      <a href="assessment.html" class="btn btn-primary">🔮 Start Free Assessment</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>🌌 Habitrix — Behavioral Future Simulation Engine | Built with ❤️</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

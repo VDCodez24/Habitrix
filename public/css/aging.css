@@ -1,0 +1,36 @@
+/* ── Aging Effect Page ────────────────────────────── */
+.aging-layout { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2rem 0; }
+
+.aging-visual { display:flex; flex-direction:column; align-items:center; }
+.face-container { width:300px; height:300px; border-radius:50%; position:relative; overflow:hidden; margin:2rem auto; border:4px solid var(--border); transition:all 1s ease; }
+.face-base { width:100%; height:100%; background:linear-gradient(135deg, #ffd89b, #f0c27f); border-radius:50%; position:relative; transition:all 1s ease; }
+
+/* Eyes */
+.face-eyes { position:absolute; top:35%; width:100%; display:flex; justify-content:center; gap:60px; }
+.eye { width:30px; height:20px; background:white; border-radius:50%; position:relative; transition:all 0.5s ease; }
+.eye::after { content:''; width:14px; height:14px; background:#2c1810; border-radius:50%; position:absolute; top:3px; left:8px; }
+.dark-circles { position:absolute; top:42%; width:100%; display:flex; justify-content:center; gap:40px; }
+.dark-circle { width:40px; height:12px; border-radius:50%; background:rgba(80,40,80,0); transition:all 1s ease; }
+
+/* Mouth */
+.mouth { position:absolute; bottom:28%; left:50%; transform:translateX(-50%); width:40px; height:20px; border-bottom:3px solid #c0392b; border-radius:0 0 50% 50%; transition:all 0.5s ease; }
+
+/* Energy aura */
+.energy-aura { position:absolute; inset:-20px; border-radius:50%; background:radial-gradient(circle, transparent 60%, rgba(0,255,136,0.15)); transition:all 1s ease; pointer-events:none; }
+
+.aging-details { padding:1.5rem; }
+.aging-detail-item { margin-bottom:1.25rem; }
+.aging-detail-item__label { font-weight:600; font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.25rem; }
+.aging-detail-item__value { font-size:0.95rem; }
+
+.aging-meter { display:flex; align-items:center; gap:1rem; margin:2rem 0; padding:1.5rem; }
+.aging-meter__label { font-weight:700; white-space:nowrap; }
+.aging-meter__bar { flex:1; height:12px; background:var(--bg-secondary); border-radius:6px; overflow:hidden; }
+.aging-meter__fill { height:100%; border-radius:6px; transition:width 1s ease; }
+.aging-meter__value { font-weight:800; font-size:1.3rem; min-width:50px; text-align:right; }
+
+.recommendations-list { list-style:none; }
+.recommendations-list li { padding:0.5rem 0; padding-left:1.5rem; position:relative; color:var(--text-secondary); font-size:0.9rem; }
+.recommendations-list li::before { content:'💡'; position:absolute; left:0; }
+
+@media(max-width:768px) { .aging-layout { grid-template-columns:1fr; } }

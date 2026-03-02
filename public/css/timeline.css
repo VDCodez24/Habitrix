@@ -1,0 +1,18 @@
+/* ── Timeline Page ────────────────────────────────── */
+.timeline-phases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0; }
+.phase-card { padding: 1.5rem; position: relative; overflow: hidden; }
+.phase-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--accent); }
+.phase-card--current::before { background: var(--info); }
+.phase-card--3mo::before { background: var(--success); }
+.phase-card--1yr::before { background: var(--warning); }
+.phase-card--5yr::before { background: var(--danger); }
+.phase-card__icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.phase-card__title { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.phase-card__desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.phase-card__probs { margin-top: 1rem; }
+.phase-card__prob-item { display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:0.35rem; }
+.phase-card__prob-label { color: var(--text-muted); }
+.phase-card__prob-value { font-weight: 700; }
+.trend-chart-wrap { margin-top: 2rem; }
+@media (max-width:1024px) { .timeline-phases { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:640px) { .timeline-phases { grid-template-columns: 1fr; } }

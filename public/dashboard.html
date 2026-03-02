@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Future Mirror</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar__logo"><span>🌌</span> Future Mirror</a>
+    <div class="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+    <div class="navbar__links">
+      <a href="index.html">Home</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="alternate.html">Alternate</a>
+      <a href="comparison.html">Compare</a>
+      <a href="divergence.html">Divergence</a>
+      <a href="blueprint.html">Blueprint</a>
+      <a href="problems.html">Problems</a>
+      <a href="aging.html">Aging</a>
+    </div>
+    <div class="navbar__actions">
+      <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </nav>
+
+  <main class="main-content" id="dashboard-content">
+    <h1 class="section-title">📊 Your Dashboard</h1>
+    <p class="section-subtitle">Your behavioral profile at a glance</p>
+
+    <!-- Score Cards -->
+    <div class="dashboard-grid" id="score-cards"></div>
+
+    <!-- Radar Chart -->
+    <div class="dashboard-grid">
+      <div class="card radar-card">
+        <h3>🎯 Score Radar</h3>
+        <div id="radar-chart"></div>
+      </div>
+      <div class="card summary-card" id="narrative">
+        <h3>🤖 AI Analysis</h3>
+        <div class="summary-text"><p style="color:var(--text-muted)">Loading AI narrative...</p></div>
+      </div>
+    </div>
+
+    <!-- Risk Alerts -->
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2rem">🛑 Risk Cluster Alerts</h2>
+    <div class="risk-alerts" id="risk-alerts"></div>
+
+    <!-- Probabilities -->
+    <h2 class="section-title" style="font-size:1.4rem">📈 Future Probabilities</h2>
+    <div class="probabilities-grid" id="probabilities"></div>
+
+    <!-- Explore Features -->
+    <h2 class="section-title" style="font-size:1.4rem;margin-top:2rem">🔮 Explore More</h2>
+    <div class="features-nav">
+      <a href="timeline.html" class="card feature-nav-card"><div class="feature-nav-card__icon">📅</div><div class="feature-nav-card__title">Timeline</div></a>
+      <a href="alternate.html" class="card feature-nav-card"><div class="feature-nav-card__icon">🌍</div><div class="feature-nav-card__title">Alternate Universe</div></a>
+      <a href="comparison.html" class="card feature-nav-card"><div class="feature-nav-card__icon">👥</div><div class="feature-nav-card__title">Peer Compare</div></a>
+      <a href="divergence.html" class="card feature-nav-card"><div class="feature-nav-card__icon">🔄</div><div class="feature-nav-card__title">Divergence</div></a>
+      <a href="blueprint.html" class="card feature-nav-card"><div class="feature-nav-card__icon">📋</div><div class="feature-nav-card__title">30-Day Plan</div></a>
+      <a href="aging.html" class="card feature-nav-card"><div class="feature-nav-card__icon">🧬</div><div class="feature-nav-card__title">Aging Effect</div></a>
+    </div>
+  </main>
+
+  <footer class="footer"><p>🌌 Future Mirror — Behavioral Future Simulation Engine | Built with ❤️</p></footer>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="js/global.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

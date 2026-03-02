@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Divergence — Future Mirror</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/divergence.css">
+</head>
+<body>
+  <nav class="navbar"><a href="index.html" class="navbar__logo"><span>🌌</span> Future Mirror</a><div class="hamburger"><span></span><span></span><span></span></div><div class="navbar__links"><a href="index.html">Home</a><a href="assessment.html">Assessment</a><a href="dashboard.html">Dashboard</a><a href="timeline.html">Timeline</a><a href="alternate.html">Alternate</a><a href="comparison.html">Compare</a><a href="divergence.html">Divergence</a><a href="blueprint.html">Blueprint</a><a href="problems.html">Problems</a><a href="aging.html">Aging</a></div><div class="navbar__actions"><button class="theme-toggle" onclick="toggleTheme()">☀️</button></div></nav>
+  <main class="main-content" id="div-content">
+    <h1 class="section-title">🔄 Future Divergence Slider</h1>
+    <p class="section-subtitle">Adjust your scores and watch probabilities shift in real-time</p>
+    <div class="divergence-layout">
+      <div class="card sliders-panel"><h3 style="font-weight:700;margin-bottom:1.5rem">🎚️ Adjust Scores</h3><div id="sliders"></div></div>
+      <div class="card" style="padding:1.5rem"><h3 style="font-weight:700;margin-bottom:1rem">📊 Probability Shift</h3><div id="div-chart"></div></div>
+    </div>
+    <h3 style="font-weight:700;margin:2rem 0 1rem">📉 Probability Deltas</h3>
+    <div id="deltas"></div>
+  </main>
+  <footer class="footer"><p>🌌 Future Mirror | Built with ❤️</p></footer>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="js/global.js"></script><script src="js/scoring.js"></script><script src="js/divergence.js"></script>
+</body>
+</html>

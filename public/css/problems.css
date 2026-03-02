@@ -1,0 +1,32 @@
+/* ── Problems Page ────────────────────────────────── */
+.problem-hero { text-align:center; padding:3rem 1rem; background:linear-gradient(135deg,rgba(239,68,68,0.08),rgba(124,58,237,0.08)); border-radius:var(--radius); margin-bottom:3rem; border:1px solid var(--border); }
+.problem-hero h2 { font-size:1.8rem; font-weight:800; margin-bottom:0.75rem; }
+.problem-hero p { color:var(--text-secondary); max-width:700px; margin:0 auto; }
+
+.problems-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin:2rem 0; }
+.problem-card { padding:1.5rem; border-left:4px solid var(--danger); }
+.problem-card__icon { font-size:2rem; margin-bottom:0.75rem; }
+.problem-card__title { font-weight:700; margin-bottom:0.5rem; }
+.problem-card__desc { font-size:0.85rem; color:var(--text-secondary); }
+
+.solutions-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin:2rem 0; }
+.solution-card { padding:1.5rem; border-left:4px solid var(--success); }
+.solution-card__header { display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; }
+.solution-card__icon { font-size:1.5rem; }
+.solution-card__problem { font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; }
+.solution-card__feature { font-weight:700; margin-bottom:0.5rem; font-size:1.05rem; }
+.solution-card__impact { font-size:0.85rem; color:var(--success); font-weight:600; }
+.solution-card__desc { font-size:0.85rem; color:var(--text-secondary); margin-top:0.5rem; }
+
+.impact-section { text-align:center; padding:3rem 1rem; margin:2rem 0; }
+.impact-stats { display:flex; justify-content:center; gap:3rem; margin-top:1.5rem; flex-wrap:wrap; }
+.impact-stat { text-align:center; }
+.impact-stat__number { font-size:2.5rem; font-weight:900; color:var(--accent-light); }
+.impact-stat__label { font-size:0.8rem; color:var(--text-muted); }
+
+.use-cases { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin:2rem 0; }
+.use-case-card { padding:1.25rem; text-align:center; }
+.use-case-card__icon { font-size:2rem; margin-bottom:0.5rem; }
+.use-case-card__title { font-weight:600; font-size:0.85rem; }
+
+@media(max-width:768px) { .problems-grid,.solutions-grid { grid-template-columns:1fr; } .use-cases { grid-template-columns:repeat(2,1fr); } }

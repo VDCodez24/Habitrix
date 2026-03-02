@@ -1,0 +1,187 @@
+/* ══════════════════════════════════════════════════
+   FUTURE MIRROR — Assessment Page
+   ══════════════════════════════════════════════════ */
+
+.assessment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.group-title .group-icon { font-size: 1.5rem; }
+
+/* ── Habit Cards Grid ────────────────────────────── */
+.habits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Individual Habit Card ───────────────────────── */
+.habit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.habit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--success);
+  transition: background 0.4s ease;
+}
+
+.habit-card[data-level="optimal"]::before { background: var(--success); }
+.habit-card[data-level="moderate"]::before { background: var(--warning); }
+.habit-card[data-level="risk"]::before { background: var(--danger); }
+
+.habit-card[data-level="optimal"] { border-color: rgba(16, 185, 129, 0.2); }
+.habit-card[data-level="moderate"] { border-color: rgba(245, 158, 11, 0.2); }
+.habit-card[data-level="risk"] { border-color: rgba(239, 68, 68, 0.2); }
+
+.habit-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.habit-card__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.habit-card__emoji {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.habit-card:hover .habit-card__emoji {
+  transform: scale(1.2);
+}
+
+/* ── Slider ──────────────────────────────────────── */
+.habit-card__slider-wrap {
+  margin: 0.75rem 0;
+}
+
+.habit-card__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.habit-card__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+  transition: all 0.2s ease;
+}
+
+.habit-card__slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+}
+
+.habit-card__slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: none;
+}
+
+.habit-card__value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.habit-card__value {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+/* ── Risk Meter ──────────────────────────────────── */
+.risk-meter {
+  height: 4px;
+  background: var(--bg-secondary);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.risk-meter__fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background 0.5s ease;
+}
+
+/* ── Submit Area ─────────────────────────────────── */
+.assessment-submit {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.assessment-submit .btn {
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+}
+
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.progress-bar {
+  width: 200px;
+  height: 6px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
